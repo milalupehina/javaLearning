@@ -1,0 +1,1066 @@
+//public class main {
+
+//}
+
+//variables & primary
+/*
+
+class Main { // class is a neccessary or what
+
+    //public static void main(String[] args) { // for main it is important this exact syntax
+      //  System.out.println("Hello, Java");//to output just s and choose
+    //}
+
+
+    //public static void main(String[] args) {
+    //    System.out.println("passed arguments: " + args.length);
+    //} // outputs number of terminal arguments
+
+    //variables
+
+    //name _..., $..., a(!A!0-9)...
+
+    //public static void main(String[] args) {
+// put your code here
+    //    int one = 1; // declares an integer variable "one" and assigns the value 1 to it
+     //   int two; // declares an integer variable "two"
+      //  two = 2; // assign the value 2 to the variable "two"
+       // int three = 3, four = 4; // declares two integer variables and assigns values to them
+
+    //    System.out.println(one); // prints 1
+     //   System.out.println(two); // prints 2
+      //  System.out.println(three); // prints 3
+       // System.out.println(four); // prints 4
+
+    //    int five = four; // read the value of the variable "four" and assign it to the variable "five";
+
+     //   char ch = 'A'; // declare a character variable named "ch" and assign 'A' to it
+      //  String str = "Hello, Java"; // declare a string variable named "str" and assign text to it
+       // double pi = 3.1415; // declare a double variable named "pi" and assign 3.1415 to it
+    //}
+}
+*/
+
+//input the most common (standart)
+/*
+//input the most common (standart)
+import java.util.Scanner;
+public class Task {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int a = scanner.nextInt(); // it reads an integer value from the standard input
+    int b = scanner.nextInt(); // it reads another integer value from the standard input
+    System.out.println(a + b); // it writes the result of a + b in the standard output
+  }
+}
+*/
+
+//space
+/*
+//space
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        //put your code here
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt(); // it reads an integer value from the standard input
+        int b = scanner.nextInt(); // it reads another integer value from the standard input
+        System.out.println(b+" "+a); // it writes the result
+    }
+}*/
+
+//input
+/*
+
+//input
+import java.io.BufferedReader;
+        import java.io.InputStreamReader;
+        import java.io.IOException;
+public class Task {
+    public static void main(String[] args) throws IOException {
+// the object for reading
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+// it takes a string and splits it by whitespaces
+        String[] values = reader.readLine().split("\\s+");
+        int a = Integer.parseInt(values[0]); // It converts the first value to integer
+        int b = Integer.parseInt(values[1]); // It converts the second value to integer
+        System.out.println(a + b);
+    }
+}*/
+
+//Sizes and ranges of primitive types
+/*
+
+Sizes and ranges of primitive types
+
+Integer types store numbers such as 10, 15, -14.
+The size of the values that can be stored depends on the integer type that we choose.
+The range of values is calculated as −(2^{n−1}) to (2^{n−1})−1,
+where n is the number of bits.
+The range includes 0 as well.
+
+  byte: the size is 8 bits (1 byte), the range is from -128 to 127
+  short: the size is 16 bits (2 bytes), the range is from -32768 to 32767
+  int: the size is 32 bits (4 bytes), the range is from −(2^{31}) to (2^{31})−1
+  long: the size is 64 bits (8 bytes), the range is from −(2^{63}) to (2^{63})−1
+
+Floating-point types represent numbers with a fractional part.
+
+  float: the size is 32 bits (4 bytes), the range is from 3.4e−038 to 3.4e+038
+  (approximately, 6-7 significant decimal digits)
+  double: the size is 64 bits (8 bytes), the range is from 1.7e−308 to 1.7e+308
+  (approximately, 14-16 significant decimal digits)
+
+The character type (char) stores the character constant in the memory.
+The size is 16 bits (2 bytes). The range is from 0 to 65536 (unsigned).
+
+The boolean type can store only two values: true or false.
+It represents only one bit of information,
+but its size is not something that's precisely defined.
+
+
+So, remember Java has 8 primitive types.
+
+The most used are int, long, boolean, char, and double.
+*/
+
+//integer
+/*class Task {
+    public static void main(String[] args) {
+    // a decimal number, it consists of digits 0-9
+        int decimalNumber = 500;
+    // a hexadecimal number, it consists of digits 0-9 and letters A-F
+        int hexNumber = 0xFF;
+    // a binary number, it consists of digits 0 and 1
+        int binaryNumber = 0b10001;
+    // an octal number, it consists of digits 0-7
+        int octalNumber = 0335;
+    // L or l - is a literal for longs
+        long longNumber = 33L;
+    // _ is the underscore character
+        long bigNumber = 100_000_000_000L;
+
+       int intZero; // it's equal to 0; int type
+       long longZero; // it's equal to 0L; long type
+
+    // The min value of int type
+        int minInt = Integer.MIN_VALUE;
+    // The max value of int type
+        int maxInt = Integer.MAX_VALUE;
+    // The min value of long type
+        long minLong = Long.MIN_VALUE;
+    // The max value of long type
+        long maxLong = Long.MAX_VALUE;
+
+
+            //Binary operators
+        int a = 6;
+        int b = 2;
+    // addition, the result is 8
+        int sum = a + b;
+    // subtraction, the result is 4
+        int diff = a - b;
+    // multiplication, the result is 12
+        int mult = a * b;
+    // integer division, the result is 3
+        int intDiv = a / b;
+    // remainder, the result is 0
+        int remainder = a % b;
+
+    // a is 15, b is 6
+        int a = 15;
+        int b = 6;
+    // integer division, the result is 2
+        int intDiv = a / b;
+    // remainder, the result is 3
+        int rem = a % b;
+    // the result is -1 because -21 divided by 4 leaves a remainder of -1
+        int negRem = -21 % 4;
+
+    // throws ArithmeticException (runtime exception)
+        int divResult = 5 / 0;
+    // also throws ArithmeticException (runtime exception)
+        int remResult = 5 % 0;
+
+            //Unary operators
+    // unary plus indicates the positive value (it's an optional operator)
+        int a = +4;
+    // unary minus negates the value 4, the result is -4
+        int b = -a;
+    // negate the value again, the result is 4
+        b = -b;
+
+    // a is 5
+        int a = 5;
+    // prefix increment: b is 6, a is 6
+        int b = ++a;
+    // postfix increment: c is 6, b is 7
+        int c = b++;
+    // postfix decrement: d is 6, c is 5
+        int d = c--;
+
+            //The different forms of the assignment operator
+            //+=, *=, /=, %=
+        int a = 2, b = 3, c = 4;
+    // the same as a = a + b, the result is 5
+        a += b;
+    // the same as c = c * b, the result is 12
+        c *= b;
+
+            //Arithmetic and assignment operators precedence
+//Operators have different priorities in expressions.
+//These priorities define the operator's precedence
+//(the order of execution).
+
+//Below, the studied operators are listed
+//according to precedence order
+//(from the highest to the lowest):
+
+//unary: +, -, ++, --
+//multiplicative: *, /, %
+//additive: +, -
+//assignment: =, +=, -=, *=, /=
+
+//To change the order of execution,
+//you can enclose the expression in (parentheses)
+like in mathematics:
+
+    // the result is 23
+        int a = 3 + 4 * 5;
+    // the result is 35
+        int b = (3 + 4) * 5;
+    // 11 -> 44 -> 47 -> 94 -> 95
+        int c = 1 + (2 * (3 + (4 * (5 + 6))));
+
+
+    }
+}*/
+
+
+/*import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String s = scanner.next();
+
+        int first = Character.getNumericValue(s.charAt(0));
+        int second = Character.getNumericValue(s.charAt(1));
+        int third = Character.getNumericValue(s.charAt(2));
+
+
+        System.out.println(first + second + third);
+
+    }
+}*/
+/*
+// Posted from EduTools plugin
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //put your code here
+        Scanner scanner = new Scanner(System.in);
+        int output = 0;
+        String line = scanner.nextLine();
+        for (int i = 0; i < line.length(); i++) {
+            output += Character.getNumericValue(line.charAt(i));
+        }
+        System.out.printf("%d", output);
+    }
+}*/
+/*import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        char[] x = new Scanner(System.in).next().toCharArray();
+        System.out.println(""+x[2]+x[1]+x[0]);
+    }
+}*/
+/*import java.util.Scanner;
+class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(new StringBuffer(scanner.next()).reverse());
+    }
+}*/
+/*import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
+        StringBuilder builder = new StringBuilder();
+        for (int i=str.length()-1; i>=0; i--){
+            builder.append(str.charAt(i));
+        }
+        System.out.println(builder.toString());
+    }
+}*/
+/*import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        for (int i = line.length() - 1; i >= 0; i--) {
+            System.out.printf("%d", Character.getNumericValue(line.charAt(i)));
+        }
+    }
+}*/
+/*import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+        String[] num = read.readLine().split("");
+        int num1 = Integer.parseInt(num[0]);
+        int num2 = Integer.parseInt(num[1]);
+        int num3 = Integer.parseInt(num[2]);
+        System.out.println(num3 + "" + num2 + "" + num1);
+    }
+}*/
+/*import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String s = scanner.next();
+
+        String first = String.valueOf(s.charAt(0));
+        String second = String.valueOf(s.charAt(1));
+        String third = String.valueOf(s.charAt(2));
+
+        System.out.println(third + second + first);
+
+    }
+}*/
+/*1 hour 1 minute 1 seond = 1 + 60 + 60*60 = 3661
+2 hour 2 minute 2 seond = 2 + 2*60 + 2*60*60 = 7322
+
+sec - fir = 3661
+
+1 hour 2 minute 30 seond = 30 + 2*60 + 60*60 = 3750
+1 hour 3 minute 20 seond = 20 + 3*60 + 60*60 = 3800
+
+sec - fir = 50
+
+(h2-h1)*3600+(m2-m1)*60+(s2-s1)
+
+*/
+/*import java.util.Scanner;
+
+public class Main {
+
+    private static int desks(int x) {
+        if (x % 2 == 0) {
+            return x / 2;
+        } else {
+            return x / 2 + 1;
+        }
+    }
+
+    public static void main(String[] args) {
+        int studentsOne = new Scanner(System.in).nextInt();
+        int studentsTwo = new Scanner(System.in).nextInt();
+        int studentsThree = new Scanner(System.in).nextInt();
+        int class1 = desks(studentsOne);
+        int class2 = desks(studentsTwo);
+        int class3 = desks(studentsThree);
+
+        System.out.print(class1 + class2 + class3);
+
+    }
+}*/
+/*
+snail
+(1+(h-a)/(a-b)) + ((a-b)-1+(h-a)%(a-b))/(a-b)
+
+(1+(h-a)/(a-b))
+h-a - day trip
+a-b - day-night trip
++1
+
+((a-b)-1+(h-a)%(a-b))/(a-b)
+0/1
+((a-b)-1+(h-a)%(a-b))
+1-1 + 7%1 =0
+*/
+
+//boolean
+/*
+//The default value for this type is false.
+
+    // t is true
+        boolean t = true;
+    // f is false
+        boolean f = false;
+    // defaultValue is false
+        boolean defaultValue;
+
+//0 is not equal to false.
+
+            //Logical operators
+//The NOT operator is a unary operator that reverses
+//the boolean value.
+//It is written as !.
+    // f is false
+        boolean f = false;
+    // t is true
+        boolean t = !f;
+
+//The AND operator is a binary operator that returns true
+//if both operands are true, otherwise, it is false.
+//The operator can be written as && and &.
+    // false
+    boolean b1 = false && false;
+    // false
+    boolean b2 = false && true;
+    // false
+    boolean b3 = true && false;
+    // true
+    boolean b4 = true && true;
+
+//The OR operator is a binary operator that returns
+//true if at least one operand is true,
+//otherwise, it returns false.
+//The operator can be written as || and |.
+    // false
+    boolean b1 = false || false;
+    // true
+    boolean b2 = false || true;
+    // true
+    boolean b3 = true || false;
+    // true
+    boolean b4 = true || true;
+
+//The XOR (exclusive OR) operator is a binary operator
+//that returns true
+//if boolean operands have different values,
+//otherwise, it is false.
+//The operator is written as ^ and can be used
+//Instead of the relation operator != (NOT EQUAL TO).
+    // false
+    boolean b1 = false ^ false;
+    // true
+    boolean b2 = false ^ true;
+    // true
+    boolean b3 = true ^ false;
+    // false
+    boolean b4 = true ^ true;
+
+            //Short-circuit operators??????????
+//There are some differences:
+
+//the & and | operators are also used as
+//bitwise operators for integer types;
+
+//the && and || operator perform Conditional-AND and Conditional-OR
+//operations on two boolean expressions.
+//These operators are called "short-circuit" operators,
+//which means that the second operand is evaluated only
+//when it is needed
+//(when the first argument doesn't suffice to determine
+//the value of the expression).
+
+//In the following example,
+//the second operand a>5 will not be evaluated
+//because the result is determined by the first operand
+//(a==10 is false):
+        int a = 20;
+    // the second expressions can't be evaluated
+        boolean result = (a == 10) && (a > 5);
+
+            //The precedence of logical operators
+//Below the logical operations are sorted in order
+//of their priority in expressions:
+
+//! - NOT
+//& - AND
+//^ - XOR
+//| - OR
+//&& - conditional AND
+//|| - conditional OR
+
+//So, the following statement is true:
+    // true, because !false is evaluated first
+        boolean b = true && !false;
+
+            //Relational operators
+//Java has six relational operators:
+
+//== (equal to)
+//!= (not equal to)
+//> (greater than)
+//>= (greater than or equal to)
+//< (less than)
+//<= (less than or equal to)
+
+//The result of applying a relational operator to
+//operands is the boolean type (true or false).
+
+//Operators == and != can be applied to operands
+//of any primitive types, but operators >, >=, <, <=
+//cannot be applied to boolean operands.
+
+//In expressions, the relational operators have
+//a lower priority than arithmetic operators.
+
+            //Comparing integer numbers
+        int num1 = 4;
+        int num2 = 2;
+
+    // false
+        boolean b1 = num1 == num2;
+    // true
+        boolean b2 = num1 > num2;
+
+    // false
+        boolean b3 = 500 != 500;
+    // true
+        boolean b4 = 300 <= 300;
+
+        long number = 1000;
+    // 1010 > 1009 is true
+        boolean result = number + 10 > number + 9;
+
+*/
+
+//comparing
+/*
+            //Comparing characters
+    // prints "true"
+        System.out.println('a' < 'b');
+    // prints "true"
+        System.out.println('a' == 'a');
+    // prints "false"
+        System.out.println('e' < 'E');
+
+            //Comparing floating-point numbers
+//Do not use == or != when comparing
+//floating-point numbers in Java.
+//Instead, if you'd like to compare two floating-point values
+//a and b, use the standard way:
+
+        Math.abs(a - b) < eps
+
+//It means the absolute value of
+//the difference is less than a certain epsilon.
+
+    // 0.99999...
+        double val = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1;
+
+    // it prints "false"
+        System.out.println(val == 1.0);
+    // it prints "true"
+        System.out.println(Math.abs(val - 1.0) < 1e-6);
+
+            //Joining relational operations using logical operators
+
+    // 100 < number < 200
+        number > 100 && number < 200
+        (number > 100) && (number < 200)
+
+//the code checks that the value of number belongs to a range
+
+    // it has a value
+        int number = ...
+    // borders
+        int low = 100, high = 200;
+
+    // join two expressions using AND
+        boolean inRange = number > low && number < high;
+
+*/
+
+//floating-point numbers
+/*
+
+//Single and double precision floating-point numbers
+//There are two primitive floating point types:
+//single-precision float (32 bits)
+//and double-precision double (64 bits).
+
+        double zero = 0.0;
+    // or 2.71828d
+        double e = 2.71828;
+    // 5 * 10^(-3) = 0.005
+        double eps = 5e-3;
+
+    // the literal f is always needed
+        float pi = 3.1415f;
+    // the negative value
+        float negValue = -0.15f;
+
+//These types can store only a limited number of
+//significant decimal digits
+//(~6-7 for float and ~14-16 for double):
+
+    // a value with a lot of decimal digits
+        float f = 0.888888888888888888f;
+    // it prints 0.8888889
+        System.out.println(f);
+
+//The following code lets you know the size,
+//the min and the max value of the double type:
+
+    // 64 bits
+        System.out.println(Double.SIZE);
+    // 4.9E-324
+        System.out.println(Double.MIN_VALUE);
+    // 1.7976931348623157E308
+        System.out.println(Double.MAX_VALUE);
+
+            //Arithmetic operations
+//addition +
+//subtraction -
+//multiplication *
+//integer division /
+//remainder %
+
+    // prints 9.5
+        System.out.println(3.4 + 6.1);
+    // prints 2.2
+        System.out.println(1.1 * 2.0);
+
+//We can even increment and decrement the numbers.
+
+        System.out.println(3.3 / 3); // prints 1.0999999999999999
+
+        double val = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1;
+    // it prints 0.9999999999999999
+        System.out.println(val);
+
+*/
+/*
+10 * (1.79%1[0.79] - 1.79*100%10/100 [])
+
+11390.625
+506.25
+22.5
+1
+System.out.println(Math.pow(x, 3) + Math.pow(x, 2) + x + 1);
+*/
+
+//The standard class Math
+/*
+//The standard class Math,
+//contains a lot of methods for
+//performing basic numeric operations
+//including exponential,
+//modulus, trigonometric functions,
+//finding the max/min of two numbers and so on.
+
+//The most common methods are listed below:
+
+returns the absolute value of its argument
+    Math.abs(...)
+returns the square root of its argument
+    Math.sqrt(...)
+returns the cube root of its argument
+    Math.cbrt(...)
+returns the value of the first argument raised
+to the power of the second argument
+    Math.pow(..., ...)
+returns the smaller value of two arguments
+    Math.min(..., ...)
+returns the greater value of two arguments
+    Math.max(..., ...)
+converts an angle measured in degrees
+to an angle measured in radians (approximately)
+    Math.toRadians(...)
+returns the
+trigonometric sin of the given angle in radians
+    Math.sin(...)
+returns the
+trigonometric cos of the given angle in radians
+    Math.cos(...)
+returns a double value with a positive sign,
+greater than or equal to 0.0 and less than 1.0
+    Math.random()
+returns the largest double value
+that is less than or equal to its argument
+and is equal to an integer
+    Math.floor(...)
+returns the smallest double value
+that is greater than or equal to its argument
+and is equal to an integer
+    Math.ceil(...)
+
+the ratio of the
+circumference of a circle to its diameter
+    Math.PI
+the base of the natural logarithm
+    Math.E
+
+    // abs is 10
+    int abs = Math.abs(-10);
+    // dabs is 10.33
+    double dabs = Math.abs(-10.33);
+
+    // sqrt is 1.4142...
+    double sqrt = Math.sqrt(2);
+    // cbrt is 3.0
+    double cbrt = Math.cbrt(27.0);
+
+    // the square of 5 is 25.0
+    double square = Math.pow(5, 2);
+    // the cube of 2 is 8.0
+    double cube = Math.pow(2, 3);
+
+    // min is 11
+    int min = Math.min(11, 81);
+    // max is 30
+    int max = Math.max(20, 30);
+
+    // grad is 0.5235...
+    double grad = Math.toRadians(30);
+
+    // pi is 3.1415...
+    double pi = Math.PI;
+    // sin is 1.0
+    double sin = Math.sin(pi / 2);
+    // cos90 is -1.0
+    double cos = Math.cos(pi);
+
+    // a random value >= 0.0 and < 1.0
+    double random = Math.random();
+
+    // floor is 3.0
+    double floor = Math.floor(3.78);
+    // ceil is 5.0
+    double ceil = Math.ceil(4.15);
+
+            //The length of the hypotenuse
+        double a = 3, b = 4;
+    // c is 5.0
+        double c = Math.hypot(a, b);
+*/
+/*
+a = (2,4)
+b = (3,1)
+
+
+           (a,b)               2*3+4*1
+cos phi = ------- = ---------------------------
+          |a|*|b|   sqrt(2^2+4^2)*sqrt(3^2+1^2)
+
+phi = arccos(cos phi) = degrees
+*/
+
+//The binary format
+/*
+The Java language provides several
+operators for manipulating bits of integer numbers.
+
+            //Bitwise operators
+There are four bitwise operators:
+~ (bitwise NOT, inversion, complement),
+| (bitwise OR),
+& (bitwise AND)
+and ^ (bitwise XOR).
+
+~ is a unary operator that inverses bits
+in the binary format of the number
+making every 0 a 1 and every 1 a 0.
+It also changes the sign bit of the value.
+
+| is a binary operator that performs bitwise OR:
+the result is that the digit is 1 if at least
+one operand digit is 1, otherwise, it is 0;
+
+& is a binary operator that performs bitwise AND:
+the result is that the digit is 1 if both operand
+digits are 1, otherwise, it is 0;
+
+^ is a binary operator that performs bitwise XOR:
+the result is that the digit is 1 if exactly
+one operand is 1, otherwise, it is 0
+
+The listed operators can be applied to
+both integer and boolean operands.
+If both operands are integers then
+bitwise operations will be performed.
+If both operands are booleans,
+they perform the corresponding logical operations
+(except ~).
+
+    // binary format 1111
+        int first = 15;
+    // binary format 1010
+        int second = 10;
+
+    // 1111 & 1010 = 1010, the result is 10
+        int bitwiseAnd = first & second;
+    // 1111 | 1010 = 1111, the result is 15
+        int bitwiseOr = first | second;
+    // 1111 ^ 1010 = 0101, the result is 5
+        int bitwiseXor = first ^ second;
+
+            //Bit-shift operators
+In additional to the bitwise operators,
+Java also provides bit-shift operators
+which can be used to shift bits of
+an integer number from one position to another.
+
+There are three bit-shift operators:
+
+<< is a signed bit-shift operator that
+shifts a bit pattern to the left by
+the distance specified in the right operand.
+It fills the empty place with zeros;
+
+>> is a signed bit-shift operator that
+shifts a bit pattern to the right by
+the distance specified in the right operand.
+It fills the empty place with values of the sign bit.
+
+>>> is an unsigned bit-shift operator that
+shifts a bit pattern to the right by
+the distance specified in the right operand.
+It is almost like >>, but shifted values
+are filled up with zeros.
+The result of the >>> operator is always positive.
+
+
+    // binary: 0001 1001, decimal: 25
+        int val = 25;
+
+    // binary: 0011 0010, decimal: 50
+        val = val << 1;
+    // binary: 1100 1000, decimal: 200
+        val = val << 2;
+
+    // binary: 1110, decimal: 14
+        int anotherVal = 14;
+    // binary: 0111, decimal: 7
+        anotherVal = anotherVal >> 1;
+
+*/
+
+//Characters
+/*
+Char is a primitive type for storing and
+processing single 16-bit Unicode characters.
+A char literal is a single character enclosed
+in single quote marks like: 'A', 'b', '8'.
+
+It has a minimum value of
+\'u0000' and a maximum value of '\uffff';
+
+variables of this type can be used as
+16-bit unsigned integer numbers in
+arithmetic operations (the range is [0, 65535]);
+
+characters are ordered,
+it's possible to compare two character values.
+
+    // the 'a' character
+        char a = 'a';
+    // the 'b' character
+        char b = 'a' + 1;
+    // the 'd' character
+        char d = 'b' + 2;
+
+    // the 'e' character
+        char ch1 = 101;
+    // the '@' character
+        char ch2 = '\u0040';
+
+    // the character '1'
+        char ch1 = '1';
+    // it's another character from the unicode table,
+    //it’s not the same as '1'
+        char ch2 = 1;
+
+            //Escape sequences
+Some characters are used to control computer devices.
+They are known as the escape sequences or
+control sequences.
+They consists of more than one element,
+but they are considered as a single character.
+
+The most widely used escape sequences:
+
+'\n' is the newline character;
+'\t' is the tab character;
+'\r' is the carriage return character;
+'\\' is the backslash character;
+'\'' is the single quote mark;
+'\"' is the double quote mark.
+
+    System.out.print('\t'); // make a tab
+    System.out.print('a');  // prints 'a'
+    System.out.print('\n'); // go to the new line
+    System.out.print('c');  // prints 'c'
+
+    // in the unicode table the next after 'a' is 'b'
+        char b = 'a' + 1;
+    // '0'
+        char zero = 48;
+    // in the unicode table the next after '0' is '1'
+        char one = '0' + 1;
+    // the result is 'c', not '3' because
+    //the operation sums codes
+        char ch = '1' + '2';
+
+            //Methods for processing characters
+The class Character has some useful methods for processing characters. Some of them are given below:
+
+returns true if the given character is
+a digit ('1', '2', etc), otherwise - false;
+Character.isDigit(char ch)
+
+returns true if the given character is
+a letter (a', 'A', 'b', etc), otherwise - false;
+Character.isLetter(char ch)
+
+returns true if the given character is
+a letter or a digit, otherwise - false;
+Character.isLetterOrDigit(char ch)
+
+returns true if the given character is
+the white space, otherwise - false;
+Character.isWhitespace(char ch)
+
+returns true if the given character is
+an uppercase character, otherwise - false;
+Character.isUpperCase(char ch)
+
+returns true if the given character is
+an lowercase character, otherwise - false;
+Character.isLowerCase(char ch)
+
+returns the uppercase form of the given character;
+Character.toUpperCase(char ch)
+
+returns the lowercase form of the given character.
+Character.toLowerCase(char ch)
+
+    // true
+    boolean isDigit = Character.isDigit('1');
+    // false
+    boolean isLetter = Character.isLetter('4');
+
+    // true
+    boolean isLetterOfDigit = Character.isLetterOrDigit('E');
+
+    // true
+    boolean isUpperCase = Character.isUpperCase('A');
+    // false
+    boolean isLowerCase = Character.isLowerCase('1');
+
+    char upperCaseA = Character.toUpperCase('a');
+
+*/
+
+//Type casting
+/*
+There are two kinds of casting of primitive types:
+implicit and explicit.
+The first kind is performed automatically by
+the Java compiler, the second type -
+only by a programmer.
+
+            //Implicit casting
+The compiler automatically performs
+casting when the target type is
+wider than source type:
+
+double<-float<-long
+                ^
+                |
+byte->  short->int
+                ^
+                |
+               char
+
+There is no loss of information because
+the target type is
+wider than the source type.
+
+        int intVal = 8;
+    // implicit casting from int to long
+        long longVal = intVal + 1;
+    // implicit casting from long to double
+        double doubleVal = longVal;
+
+            //Explicit casting
+The explicit casting is performed by
+a programmer when the target type is
+narrower than the source type.
+This kind of casting may lose information
+about the overall magnitude of a numeric value
+and may also lose precision.
+Sometimes this can be the desired behavior.
+
+Any type casting not presented in the picture
+above requires explicit casting,
+for example: double -> int, long -> char.
+
+        double d = 2.00003;
+    // it loses the fractional part
+        long l =  (long) d;
+    // explicit type casting required
+        int i = (int) l;
+    // requires explicit casting because
+    //the result is long
+        int val = (int) (1 + 2L + 3);
+
+When performing explicit casting,
+type overflow is possible.
+It is a situation when a value is too large
+to be written to a type:
+
+        long maxLong = Long.MAX_VALUE;
+    // int variable can't store this value,
+    //the result is -1
+        int overflow = (int) maxLong;
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
