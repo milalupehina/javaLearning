@@ -8,6 +8,7 @@ public class Matrix {
     public void action (int num) {
         switch (num) {
             case 0: // add
+            System.out.println("n2 & m2: ");
 
              Matrix two0 = new Matrix(this.row, this.column);
              Matrix three0 = this.add(two0);
@@ -16,6 +17,7 @@ public class Matrix {
 
             case 1: // multiply
 
+            System.out.println("n2 & m2: ");
             //1-r, 2 - c
             Scanner sc = new Scanner(System.in);
 
@@ -31,7 +33,9 @@ public class Matrix {
             break;
 
             case 2: // transpond
+
             Matrix two2 = new Matrix(this.column, this.row);
+
             two2 = this.transpond(two2);
             print(two2);
 
@@ -55,9 +59,23 @@ public class Matrix {
 
     public Matrix(int r, int c) {
 
-		Scanner sc = new Scanner(System.in);
+        System.out.println("size is: ");
 
-            for (int i = 0; i < r; i++) {
+		Scanner sc = new Scanner(System.in);
+        this.row = r;
+        this.column = c;
+        this.matrix = new double[r][c];
+
+        System.out.println( r + "*" + c + "\nfill it: ");
+        /*
+        for (int i = 0; i < r; ++i) {
+            for (int j = 0; j < c; ++j) {
+                matr[i][j] = sc.nextDouble();
+            }
+
+        }*/
+
+        for (int i = 0; i < r; i++) {
                 for (int j = 0; j < c; j++) {
                     this.matrix[i][j] = sc.nextDouble();
                 }
@@ -102,6 +120,7 @@ public class Matrix {
     }
 
     public void print (Matrix a) {
+        System.out.println("printed: ");
         for (int i = 0; i < a.row; ++i) {
             for(int j = 0; j < a.column; ++j) {
                 System.out.print(" "+a.matrix[i][j]+" ");
@@ -134,6 +153,11 @@ public class Main
 
 
     Matrix at = new Matrix(n, m);
+    System.out.println("what would you like to do with it?\n0 - add\n1 - multiply\n2 - transpond\n3 - print it");
+    int act = sc.nextInt();
+
+    at.action(act);
+
 
       //double[][] matrix = new double[n][m];
 
@@ -141,8 +165,8 @@ public class Main
           for (int j = 0; j < m ; ++j ) {
               matrix[i][j] = sc.nextDouble;
           }
-      }*\
-
+      }
+      *\ 
 
 	}
 }
