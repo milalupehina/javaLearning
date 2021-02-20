@@ -115,25 +115,6 @@ public class Matrix {
 }
 //determiner
 
-private double[][] matrix;
-
-    public static void main(String[] args) {
-      Scanner sc = new Scanner(System.in);
-
-      int n = sc.nextInt;
-      int m = sc.nextInt;
-
-      double[n][m] matrix;
-
-      for (int i = 0; i < n; ++i) {
-          for (int j = 0; j < m ; ++j ) {
-              matrix[i][j] = sc.nextDouble;
-          }
-      }
-
-
-  }
-}
 
 
 
@@ -157,8 +138,10 @@ public class Main
     Matrix at = new Matrix(n, m);
 
       //double[][] matrix = new double[n][m];
+      int act = sc.nextInt();
 
-      
+      at.action();
+
 	}
 }
 
