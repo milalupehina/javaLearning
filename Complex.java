@@ -112,7 +112,11 @@ print(three);
       int t23 = sc.nextInt();
 
       Complex two3 = new Complex(0, 0, 0, 0, t23);
+if (two3.re*two3.re + two3.im*two3.im == 0) {
+     System.out.println("no division by 0");
+    break;
 
+}
         if (this.typo == 0 && this.typo == two3.typo) {
         Complex three = this.multiply(two3);
 //          System.out.println();
@@ -219,6 +223,7 @@ print(three);
     ---- = ------------ = -------- + (---------)i
     c+di   (c+di)(c-di)   c^2+d^2      c^2+d^2
     */
+
     Complex c = new Complex((re*b.re + im*b.im) / (b.re*b.re+b.im*b.im), (im*b.re - re*b.im)/ (b.re*b.re+b.im*b.im), 0, 0, 0);
     return c;
   }
@@ -294,11 +299,12 @@ print(three);
 
       }
   }
-
-
-
 }
 
+
+//---------Main.java
+
+/*
 import java.util.Scanner;
 public class Main {
 
@@ -318,3 +324,4 @@ public static void main(String[] args) {
   }
 
  }
+*/
