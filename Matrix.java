@@ -1,10 +1,4 @@
-import java.util.Scanner;
 
-public class Matrix {
-
-//added
-//multiply
-//transponed
 import java.util.Scanner;
 public class Matrix {
     private int row = 0;
@@ -13,43 +7,48 @@ public class Matrix {
 
     public void action (int num) {
         switch (num) {
-      case 0: // add
+            case 0: // add
 
-      Matrix two = new Matrix(this.row, this.column);
-      Matrix three = this.add(two);
-      print(three);
-          break;
-      case 1: // multiply
+             Matrix two0 = new Matrix(this.row, this.column);
+             Matrix three0 = this.add(two0);
+            print(three0);
+            break;
 
-      //1-r, 2 - c
-      Scanner sc = new Scanner(System.in);
+            case 1: // multiply
 
-    int n = sc.nextInt();
-    int m = sc.nextInt();
+            //1-r, 2 - c
+            Scanner sc = new Scanner(System.in);
 
-
-      Matrix two = new Matrix(n, m);
-      Matrix three = this.multiply(two);
-      print(three);
+            int n = sc.nextInt();
+            int m = sc.nextInt();
 
 
-          break;
-      case 2: // transpond
-      Matrix two = new Matrix(this.column, this.row);
-      two = this.transpond(two);
-      print(two);
+            Matrix two1 = new Matrix(n, m);
+            Matrix three1 = this.multiply(two1);
+            print(three1);
 
-          break;
-    case 3://determinant
-    break;
-      case 4: // print
-      print(this);
 
-          break;
-      default:
-      System.out.println("wrong action");
+            break;
 
+            case 2: // transpond
+            Matrix two2 = new Matrix(this.column, this.row);
+            two2 = this.transpond(two2);
+            print(two2);
+
+            break;
+
+            case 3: // print
+            print(this);
+
+            break;
+
+            default:
+            System.out.println("wrong action");
+            break;
+
+        }
     }
+
 
 
 
@@ -113,9 +112,6 @@ public class Matrix {
     }
 
 }
-//determiner
-
-
 
 
 //-----------Main file
@@ -129,6 +125,8 @@ public class Main
 	public static void main(String[] args) {
 
 
+	System.out.println("enter size: n*m :");
+
 	Scanner sc = new Scanner(System.in);
 
     int n = sc.nextInt();
@@ -138,9 +136,13 @@ public class Main
     Matrix at = new Matrix(n, m);
 
       //double[][] matrix = new double[n][m];
-      int act = sc.nextInt();
 
-      at.action();
+      /*for (int i = 0; i < n; ++i) {
+          for (int j = 0; j < m ; ++j ) {
+              matrix[i][j] = sc.nextDouble;
+          }
+      }*\
+
 
 	}
 }
