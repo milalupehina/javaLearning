@@ -14,114 +14,146 @@ public class Complex {
 
     Scanner sc = new Scanner(System.in);
     //if (num == 0 || num == 1 || num == 2 || num == 3) {
-      System.out.println("enter second number \ntype first:\n0 - algebraic\n1 - trigonometric");
-      int t2 = sc.nextInt();
-
-      Complex two = new Complex(0, 0, 0, 0, t2);
       //}
 
     switch (num) {
       case 0: //add
+      System.out.println("enter second number \ntype first:\n0 - algebraic\n1 - trigonometric");
+      int t2 = sc.nextInt();
+
+      Complex two = new Complex(0, 0, 0, 0, t2);
+
         if (this.typo == 0 && this.typo == two.typo) { //both algebraic
           Complex three = this.add(two);
   //        System.out.println();
+  print(three);
 
         } else if (this.typo == 1 && this.typo == two.typo) { //both trigonometric
           this.toAlgebraic();
           two.toAlgebraic();
           Complex three = this.add(two);
 //          System.out.println();
+print(three);
 
         } else if (this.typo == 0 && this.typo != two.typo) { //only first algebraic
           two.toAlgebraic();
           Complex three = this.add(two);
 //          System.out.println();
+print(three);
 
         } else if (this.typo == 1 && this.typo != two.typo) { // only secind algebraic
           this.toAlgebraic();
           Complex three = this.add(two);
 //          System.out.println();
+print(three);
         }
 
         break;
       case 1: //substract
-        if (this.typo == 0 && this.typo == two.typo) {
-          Complex three = this.substract(two);
-//          System.out.println();
+      System.out.println("enter second number \ntype first:\n0 - algebraic\n1 - trigonometric");
+      int t21 = sc.nextInt();
 
-        } else if (this.typo == 1 && this.typo == two.typo) {
+      Complex two1 = new Complex(0, 0, 0, 0, t21);
+
+        if (this.typo == 0 && this.typo == two1.typo) {
+          Complex three = this.substract(two1);
+//          System.out.println();
+print(three);
+
+        } else if (this.typo == 1 && this.typo == two1.typo) {
           this.toAlgebraic();
-          two.toAlgebraic();
-          Complex three = this.substract(two);
+          two1.toAlgebraic();
+          Complex three = this.substract(two1);
 //          System.out.println();
-
-        } else if (this.typo == 0 && this.typo != two.typo) {
-          two.toAlgebraic();
-          Complex three = this.substract(two);
+print(three);
+        } else if (this.typo == 0 && this.typo != two1.typo) {
+          two1.toAlgebraic();
+          Complex three = this.substract(two1);
 //          System.out.println();
-
-        } else if (this.typo == 1 && this.typo != two.typo) {
+print(three);
+        } else if (this.typo == 1 && this.typo != two1.typo) {
           this.toAlgebraic();
-          Complex three = this.substract(two);
+          Complex three = this.substract(two1);
 //          System.out.println();
-
+print(three);
         }
         break;
       case 2: //multiply
-        if (this.typo == 0 && this.typo == two.typo) {
-          Complex three = this.multiply(two);
-//          System.out.println();
-        } else if (this.typo == 1 && this.typo == two.typo) {
-          this.toAlgebraic();
-          two.toAlgebraic();
-          Complex three = this.multiply(two);
-//          System.out.println();
+      System.out.println("enter second number \ntype first:\n0 - algebraic\n1 - trigonometric");
+      int t22 = sc.nextInt();
 
-        } else if (this.typo == 0 && this.typo != two.typo) {
-          two.toAlgebraic();
-          Complex three = this.multiply(two);
-//          System.out.println();
+      Complex two2 = new Complex(0, 0, 0, 0, t22);
 
-        } else if (this.typo == 1 && this.typo != two.typo) {
-          this.toAlgebraic();
-          Complex three = this.multiply(two);
+        if (this.typo == 0 && this.typo == two2.typo) {
+          Complex three = this.multiply(two2);
 //          System.out.println();
+        } else if (this.typo == 1 && this.typo == two2.typo) {
+          this.toAlgebraic();
+          two2.toAlgebraic();
+          Complex three = this.multiply(two2);
+//          System.out.println();
+print(three);
+
+        } else if (this.typo == 0 && this.typo != two2.typo) {
+          two2.toAlgebraic();
+          Complex three = this.multiply(two2);
+//          System.out.println();
+print(three);
+
+        } else if (this.typo == 1 && this.typo != two2.typo) {
+          this.toAlgebraic();
+          Complex three = this.multiply(two2);
+//          System.out.println();
+print(three);
         }
         break;
       case 3: //divide
-        if (this.typo == 0 && this.typo == two.typo) {
-        Complex three = this.multiply(two);
+      System.out.println("enter second number \ntype first:\n0 - algebraic\n1 - trigonometric");
+      int t23 = sc.nextInt();
+
+      Complex two3 = new Complex(0, 0, 0, 0, t23);
+
+        if (this.typo == 0 && this.typo == two3.typo) {
+        Complex three = this.multiply(two3);
 //          System.out.println();
-      } else if (this.typo == 1 && this.typo == two.typo) {
+print(three);
+      } else if (this.typo == 1 && this.typo == two3.typo) {
         this.toAlgebraic();
-        two.toAlgebraic();
-        Complex three = this.multiply(two);
+        two3.toAlgebraic();
+        Complex three = this.multiply(two3);
 //          System.out.println();
 
-
-      } else if (this.typo == 0 && this.typo != two.typo) {
-        two.toAlgebraic();
-        Complex three = this.multiply(two);
+print(three);
+      } else if (this.typo == 0 && this.typo != two3.typo) {
+        two3.toAlgebraic();
+        Complex three = this.multiply(two3);
 //          System.out.println();
+print(three);
 
-      } else if (this.typo == 1 && this.typo != two.typo) {
+      } else if (this.typo == 1 && this.typo != two3.typo) {
         this.toAlgebraic();
-        Complex three = this.multiply(two);
+        Complex three = this.multiply(two3);
 //          System.out.println();
+print(three);
+
      }
         break;
       case 4: //type
         if (this.typo == 0) {
             this.toTrigonometric();
+            print(this);
         } else if (this.typo == 1) {
             this.toAlgebraic();
+            print(this);
         }
         //          System.out.println();
 
         break;
+
       case 5: //print
       print(this);
         break;
+
       default:
         System.out.println("wrong acton");
         break;
@@ -249,9 +281,9 @@ public class Complex {
           System.out.println("real part: " + a.re);
           System.out.println("imaginary part: " + a.im);
           if (a.im < 0) {
-              System.out.println("full record: " + a.re + " + (" + a.im + ")");
+              System.out.println("full record: " + a.re + " + (" + a.im + ")i");
           } else {
-              System.out.println("full record: " + a.re + " + " + a.im );
+              System.out.println("full record: " + a.re + " + " + a.im + "i");
           }
 
       } else if (a.typo == 1) {
@@ -264,7 +296,13 @@ public class Complex {
   }
 
 
-  public static void main(String[] args) {
+
+}
+
+import java.util.Scanner;
+public class Main {
+
+public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
     System.out.println("enter the type of number: \n0 - algebraic\n1 - trigonometric");
@@ -275,8 +313,8 @@ public class Complex {
     System.out.println("what would you like to do with it?\n0 - add\n1 -substract\n2 - multiply\n3 - divide\n4 - change type\n5 - print it");
     int act = sc.nextInt();
 
-    action(act);
+    one.action(act);
 
   }
 
-}
+ }
